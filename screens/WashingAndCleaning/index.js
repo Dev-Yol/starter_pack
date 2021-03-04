@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     StyleSheet,
     View,
+    BackHandler
 
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux'
 import { Button, Carousel, IconTray, Row, Spacer, Text, Divider, Searchbar, Screen, ScrollView } from 'components'
-import { Icons, Metrics } from '@constants'
+import { Icons, Metrics, Theme } from '@constants'
 import { logoutUser } from 'services/user'
 
-const { HOMESCREEN_CAROUSEL_ITEMS, HOMESCREEN_ICONS_CATEGORIES } = Icons
+const { HOMESCREEN_CAROUSEL_ITEMS, CLEANING_AND_WASHING_ICONS_CATEGORIES } = Icons
 export default props => {
     const state = useSelector(state => state);
     const user = state.appReducer.user;
@@ -25,21 +26,37 @@ export default props => {
         navigate('loginScreen')
     }
 
+    useEffect(() => {
+        BackHandler.addEventListener('hardwareBackPress', () => {
+            props.navigation.navigate('homeScreen')
+        });
+        return () => {
+            BackHandler.removeEventListener('hardwareBackPress', () => true)
+        }
+    }, [])
+
+
     return (
         <>
             <Screen style={{
                 flex: 1,
             }} >
 
-                <Searchbar />
+                <Searchbar style={{
+                    bar: {
+                        backgroundColor: Theme.ocean
+                    },
+                    container: {
+                        backgroundColor: Theme.ocean
+                    }
+                }} />
                 <ScrollView containerStyle={{
                     padding: 0
                 }}>
                     <Row ar>
                         <IconTray {
                             ...{
-                                col:4,
-                                data: HOMESCREEN_ICONS_CATEGORIES,
+                                data: CLEANING_AND_WASHING_ICONS_CATEGORIES,
                                 onPress: navigate
                             }
                         } />

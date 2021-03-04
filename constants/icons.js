@@ -7,9 +7,7 @@ const HOMESCREEN_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'broom',
         },
-        onPress: () => { 
-            
-        }
+        route: 'washAndCleanScreen'
     },
     {
         title: 'Purchase &\nDeliveries',
@@ -18,9 +16,7 @@ const HOMESCREEN_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'motorbike',
         },
-        onPress: () => { 
-            
-        }
+        route: ''
     },
     {
         title: 'Health,\nBeauty &\nSpa',
@@ -29,9 +25,7 @@ const HOMESCREEN_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'face-woman',
         },
-        onPress: () => { 
-            
-        }
+        route: 'healthBeautyAndSpaScreen'
     },
     {
         title: 'Handyman &\nSpecialists',
@@ -40,10 +34,168 @@ const HOMESCREEN_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'face',
         },
-        onPress: () => { 
-            
-        }
+        route: 'handymanAndSpecialistsScreen'
     },
+];
+const CLEANING_AND_WASHING_ICONS_CATEGORIES = [
+    {
+        title: 'House',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'home',
+        },
+        route: ''
+    },
+    {
+        title: 'CarWash',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'car',
+        },
+        route: ''
+    },
+    {
+        title: 'Condo',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'home-city',
+        },
+        route: ''
+    },
+    {
+        title: 'Office\nBuilding',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'domain',
+        },
+        route: ''
+    },
+    {
+        title: 'Appliances',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'fridge',
+        },
+        route: ''
+    },
+    {
+        title: 'Laundry',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'washing-machine',
+        },
+        route: ''
+    },
+];
+const HANDYMAN_AND_SPECIALISTS_ICONS_CATEGORIES = [
+    {
+        title: 'Electrician',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'face',
+        },
+        route: ''
+    },
+    {
+        title: 'Mechanic',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'face',
+        },
+        route: ''
+    },
+    {
+        title: 'Pointer',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'face',
+        },
+        route: ''
+    },
+    {
+        title: 'Plumber',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'face',
+        },
+        route: ''
+    },
+    {
+        title: 'Technician',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'face',
+        },
+        route: ''
+    },
+    {
+        title: 'Welder',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'face',
+        },
+        route: ''
+    },
+];
+const HEALTH_BEAUTY_AND_SPA_ICONS_CATEGORIES = [
+    {
+        title: 'Pedi-\nManicure',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'face',
+        },
+        route: ''
+    },
+    {
+        title: 'Hair &\nMake up Salon',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'face',
+        },
+        route: ''
+    },
+    {
+        title: 'Massage\nTeraphist',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'face',
+        },
+        route: ''
+    },
+    {
+        title: 'Facial\nServices',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'face',
+        },
+        route: ''
+    },
+    {
+        title: 'Fitness\nInstructor',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'face',
+        },
+        route: ''
+    },
+
 ];
 
 const HOMESCREEN_CAROUSEL_ITEMS = [
@@ -82,5 +234,8 @@ const HOMESCREEN_CAROUSEL_ITEMS = [
 
 export default {
     HOMESCREEN_ICONS_CATEGORIES,
+    HANDYMAN_AND_SPECIALISTS_ICONS_CATEGORIES,
+    CLEANING_AND_WASHING_ICONS_CATEGORIES,
     HOMESCREEN_CAROUSEL_ITEMS,
+    HEALTH_BEAUTY_AND_SPA_ICONS_CATEGORIES
 }

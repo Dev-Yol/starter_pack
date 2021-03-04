@@ -1,6 +1,6 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import { Login, Register, HomeScreen, LoadingScreen } from "screens";
+import { Login, Register, LoadingScreen } from "screens";
 import { Colors, Metrics } from '@constants'
 import AppRoute from './AppRoute';
 const { Intro, Step1, Step2, Step3 } = Register
@@ -28,20 +28,7 @@ const LoginStack = createStackNavigator(
     }
 );
 
-const AppStack = createStackNavigator(
-    {
-        homeScreen: {
-            screen: AppRoute,
-            navigationOptions: {
-                title: '',
-                headerShown: false
-            }
-        },
-    },
-    {
-        initialRouteName: 'homeScreen'
-    }
-);
+
 const LoadingStack = createStackNavigator(
     {
         loadingScreen: {
@@ -56,6 +43,8 @@ const LoadingStack = createStackNavigator(
         initialRouteName: 'loadingScreen'
     }
 );
+
+
 
 const RegisterStack = createStackNavigator(
     {
@@ -93,27 +82,11 @@ const RegisterStack = createStackNavigator(
 );
 
 
-// const StackNavigator = createStackNavigator(
-//     {
-//         // AuthLoading: AuthLoadingScreen,
-//         LoginScreen: LoginStack,
-//         RegisterScreen: RegisterStack,
-//         AppScreen: AppStack
-//     },
-//     {
-//         headerMode: 'none',
-//         mode: 'modal',
-//         initialRouteName: 'LoginScreen',
-//         ...defaultConfig
-//     }
-// )
-
-
 const MainNavigator = createSwitchNavigator({
     AuthLoading: LoadingStack,
     LoginScreen: LoginStack,
     RegisterScreen: RegisterStack,
-    AppScreen: AppStack
+    AppScreen: AppRoute
 },
     {
         headerMode: 'none',
@@ -121,5 +94,4 @@ const MainNavigator = createSwitchNavigator({
         initialRouteName: 'AuthLoading',
         ...defaultConfig
     })
-// export default createAppContainer(StackNavigator);
 export default createAppContainer(MainNavigator);

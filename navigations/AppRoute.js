@@ -1,65 +1,8 @@
-// import React, { useState } from 'react';
-// import { View } from 'react-native'
-// import { BottomNavigation, Text } from 'react-native-paper';
-// import { createStackNavigator } from 'react-navigation-stack';
-// import { HomeScreen } from 'screens';
-// import { Empty, Button } from 'components'
-// import { Colors, Theme } from '@constants'
-
-// const HomeScreenStack = createStackNavigator(
-//     {
-//         homescreen: {
-//             screen: HomeScreen,
-//             navigationOptions: {
-//                 title: '',
-//                 headerShown: false
-//             }
-//         },
-//     },
-//     {
-//         initialRouteName: 'homescreen'
-//     }
-// );
-// const HomeScreenRoute = () => <HomeScreenStack />;
-
-
-// export default props => {
-//     const [index, setIndex] = useState(0);
-//     const [routes] = useState([
-//         { key: 'home', title: 'Home', icon: 'home' },
-//         { key: 'profile', title: 'Profile', icon: 'account' },
-//         { key: 'recents', title: 'Recents', icon: 'history' },
-//     ]);
-
-//     const renderScene = BottomNavigation.SceneMap({
-//         home: HomeScreenStack,
-//         profile: ProfileRoute,
-//         recents: RecentsRoute,
-//     });
-
-//     return (
-//         <BottomNavigation
-//             barStyle={{
-//                 backgroundColor: Colors.white,
-//                 borderTopColor: Colors.gray,
-//                 borderTopWidth: 1,
-//                 shadowColor: Colors.black,
-//                 shadowOpacity: 0.5
-//             }}
-//             navigationState={{ index, routes }}
-//             onIndexChange={setIndex}
-//             renderScene={renderScene}
-//         />
-//     );
-// };
-
-
 import React, { useState } from 'react';
-import { View } from 'react-native';
 import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import { Text } from 'react-native-paper';
-import { HomeScreen } from 'screens';
+import { HomeScreen, WashingAndCleaningScreen,HandymanAndSpecialists,HealthBeautyAndSpaScreen } from 'screens';
 import { Empty, Button, Icon } from 'components'
 import { Colors, Theme } from '@constants'
 
@@ -77,8 +20,45 @@ const ProfileRoute = props => {
     </Empty>
 };
 
+const AppStack = createStackNavigator(
+    {
+        homeScreen: {
+            screen: HomeScreen,
+            navigationOptions: {
+                title: '',
+                headerShown: false
+            }
+        },
+        washAndCleanScreen: {
+            screen: WashingAndCleaningScreen,
+            navigationOptions: {
+                title: '',
+                headerShown: false,
+            }
+        },
+        handymanAndSpecialistsScreen: {
+            screen: HandymanAndSpecialists,
+            navigationOptions: {
+                title: '',
+                headerShown: false,
+            }
+        },
+        healthBeautyAndSpaScreen: {
+            screen: HealthBeautyAndSpaScreen,
+            navigationOptions: {
+                title: '',
+                headerShown: false,
+            }
+        },
+    },
+
+    {
+        initialRouteName: 'homeScreen'
+    }
+);
+
 const TabNavigator = createBottomTabNavigator({
-    Home: HomeScreen,
+    Home: AppStack,
     Profile: ProfileRoute,
     Recents: RecentsRoute,
 },

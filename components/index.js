@@ -5,6 +5,7 @@ import BottomSheet from './BottomSheet'
 import Button from './Button';
 import Card from './Card';
 import CardButton from './CardButton';
+import Carousel from './Carousel';
 import Container from './Container';
 import Dialog from './Dialog';
 import Divider from './Divider';
@@ -12,7 +13,8 @@ import Empty from './Empty';
 import FlatList from './FlatList';
 import HeaderIcon from './HeaderIcon';
 import HeaderLogo from './HeaderLogo';
-import Icon from './Icon'
+import Icon from './Icon';
+import IconTray from './IconTray'
 import Input from './Input';
 import ListItem from './ListItem';
 import Modal from './Modal'
@@ -35,6 +37,7 @@ export {
     Button,
     Card,
     CardButton,
+    Carousel,
     Container,
     Dialog,
     Divider,
@@ -43,6 +46,7 @@ export {
     HeaderIcon,
     HeaderLogo,
     Icon,
+    IconTray,
     Input,
     ListItem,
     Modal,

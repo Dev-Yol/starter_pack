@@ -24,7 +24,6 @@ const App = () => {
         <StoreProvider store={store}>
             <PersistGate loading={null} persistor={persistor}>
                 <PaperProvider theme={theme}>
-                    <StatusBar backgroundColor={Colors.primary}></StatusBar>
                     <Routes />
                 </PaperProvider>
             </PersistGate>

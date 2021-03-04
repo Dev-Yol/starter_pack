@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
         color: Colors.white,
         height: Metrics.xxl + 10,
         elevation: 0,
-        shadowOpacity: 0
+        shadowOpacity: 0,
+        fontSize:Metrics.font.sm
 
     },
     input: {
@@ -39,8 +40,9 @@ export default ({ style }) => {
                         }
                     }
                 }
+                
                 iconColor={Colors.white}
-                placeholderTextColor={Colors.white || placeholderTextColor}
+                placeholderTextColor={'rgba(255,255,255,0.7)' || placeholderTextColor}
                 style={{ ...styles.bar, ...style?.bar }}
                 inputStyle={{ ...styles.input, ...style?.input }}
                 placeholder="What tasks are you looking for?"
