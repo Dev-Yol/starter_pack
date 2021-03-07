@@ -56,6 +56,7 @@ export default props => {
                     <Row ar>
                         <IconTray {
                             ...{
+                                color: Theme.sun,
                                 data: HANDYMAN_AND_SPECIALISTS_ICONS_CATEGORIES,
                                 onPress: navigate
                             }

@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux'
 import { Button, Carousel, IconTray, Row, Spacer, Text, Divider, Searchbar, Screen, ScrollView } from 'components'
-import { Icons, Metrics } from '@constants'
+import { Icons, Metrics, Theme, Colors } from '@constants'
 import { logoutUser } from 'services/user'
 
 const { HOMESCREEN_CAROUSEL_ITEMS, HOMESCREEN_ICONS_CATEGORIES } = Icons
@@ -38,7 +38,8 @@ export default props => {
                     <Row ar>
                         <IconTray {
                             ...{
-                                col:4,
+                                color: Colors.primary,
+                                col: 4,
                                 data: HOMESCREEN_ICONS_CATEGORIES,
                                 onPress: navigate
                             }

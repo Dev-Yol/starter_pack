@@ -10,7 +10,7 @@ import { Button, Carousel, IconTray, Row, Spacer, Text, Divider, Searchbar, Scre
 import { Icons, Metrics, Theme } from '@constants'
 import { logoutUser } from 'services/user'
 
-const { HOMESCREEN_CAROUSEL_ITEMS, HEALTH_BEAUTY_AND_SPA_ICONS_CATEGORIES } = Icons
+const { HOMESCREEN_CAROUSEL_ITEMS, PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES } = Icons
 export default props => {
     const state = useSelector(state => state);
     const user = state.appReducer.user;
@@ -44,10 +44,10 @@ export default props => {
 
                 <Searchbar style={{
                     bar: {
-                        backgroundColor: Theme.rose
+                        backgroundColor: Theme.leaf
                     },
                     container: {
-                        backgroundColor: Theme.rose
+                        backgroundColor: Theme.leaf
                     }
                 }} />
                 <ScrollView containerStyle={{
@@ -56,8 +56,8 @@ export default props => {
                     <Row ar>
                         <IconTray {
                             ...{
-                                color:Theme.rose,
-                                data: HEALTH_BEAUTY_AND_SPA_ICONS_CATEGORIES,
+                                color: Theme.leaf,
+                                data: PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES,
                                 onPress: navigate
                             }
                         } />

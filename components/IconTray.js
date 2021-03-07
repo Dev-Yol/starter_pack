@@ -4,17 +4,31 @@ import { Icon, Ripple, Text, Spacer, Row } from 'components'
 import { Colors, Metrics } from '@constants'
 
 const { width } = Metrics
-const ItemUI = ({ icon, label, onPress, col=3 }) => (
-    <TouchableOpacity {...{ onPress }} style={{
-        ...styles.item, width: (width / col)
-    }}>
-        <>
-            <Icon {...icon} size={Metrics.icon.md + 5} style={styles.icon} />
-            <Spacer sm />
-            <Text center sm>{label}</Text>
-        </>
-    </TouchableOpacity>
-)
+const ItemUI = ({ icon, label, onPress, col = 3, color }) => {
+    const badge = {
+        backgroundColor: color,
+        width: Metrics.lg + 20,
+        height: Metrics.lg + 20,
+        opacity: 0.5,
+        borderRadius: 28,
+        transform: [{ scaleX: 1 }],
+        top: 1,
+        position: 'absolute',
+        alignSelf: 'center',
+    }
+    return (
+        <TouchableOpacity {...{ onPress }} style={{
+            ...styles.item, width: (width / col)
+        }}>
+            <>
+                <View style={badge}></View>
+                <Icon {...icon} size={Metrics.icon.md + 5} style={styles.icon} />
+                <Spacer sm />
+                <Text center sm>{label}</Text>
+            </>
+        </TouchableOpacity>
+    )
+}
 let size = 3;
 const IconTray = props => {
     const [rows, setRows] = React.useState([]);
@@ -40,6 +54,7 @@ const IconTray = props => {
                     return <View key={idx} style={styles.container} >{
                         rowItem.map((category) => {
                             return <ItemUI
+                                color={props.color}
                                 key={category.title}
                                 col={props.col || 3}
                                 icon={category.icon}
@@ -70,7 +85,7 @@ const styles = StyleSheet.create({
     },
     icon: {
         width: Metrics.icon.lg,
-        height: Metrics.icon.lg
+        height: Metrics.icon.lg,
     },
     item: {
         justifyContent: 'center',
@@ -78,4 +93,9 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         // marginHorizontal: Metrics.xs
     },
+    iconContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
 })

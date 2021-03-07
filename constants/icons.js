@@ -16,10 +16,10 @@ const HOMESCREEN_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'motorbike',
         },
-        route: ''
+        route: 'purchaseAndDeliveriesScreen'
     },
     {
-        title: 'Health,\nBeauty &\nSpa',
+        title: 'Health,\nBeauty & Spa',
         icon: {
             color: Colors.black,
             type: 'mdi',
@@ -149,6 +149,45 @@ const HANDYMAN_AND_SPECIALISTS_ICONS_CATEGORIES = [
         route: ''
     },
 ];
+const PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES = [
+    {
+        title: 'Food & Restaurant',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'food',
+        },
+        route: ''
+    },
+    {
+        title: 'Parcel',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'truck-delivery',
+        },
+        route: ''
+    },
+    {
+        title: 'QuickBuy',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'moped',
+        },
+        route: ''
+    },
+    {
+        title: 'Malling',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'cart',
+        },
+        route: ''
+    },
+
+];
 const HEALTH_BEAUTY_AND_SPA_ICONS_CATEGORIES = [
     {
         title: 'Pedi-\nManicure',
@@ -237,5 +276,6 @@ export default {
     HANDYMAN_AND_SPECIALISTS_ICONS_CATEGORIES,
     CLEANING_AND_WASHING_ICONS_CATEGORIES,
     HOMESCREEN_CAROUSEL_ITEMS,
-    HEALTH_BEAUTY_AND_SPA_ICONS_CATEGORIES
+    HEALTH_BEAUTY_AND_SPA_ICONS_CATEGORIES,
+    PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES
 }
