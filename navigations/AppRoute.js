@@ -68,6 +68,8 @@ const TabNavigator = createBottomTabNavigator({
     Home: AppStack,
     Profile: ProfileRoute,
     Recents: RecentsRoute,
+    Pending: RecentsRoute,
+    Calendar: RecentsRoute
 },
     {
         defaultNavigationOptions: ({ navigation }) => ({
@@ -87,7 +89,7 @@ const TabNavigator = createBottomTabNavigator({
             },
         }),
         tabBarOptions: {
-            activeTintColor: Colors.black,
+            activeTintColor: Theme.primary,
             inactiveTintColor: Colors.darkGray,
         },
     });

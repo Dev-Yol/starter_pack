@@ -56,6 +56,7 @@ export default props => {
                     <Row ar>
                         <IconTray {
                             ...{
+                                col:3,
                                 color: Theme.ocean,
                                 data: CLEANING_AND_WASHING_ICONS_CATEGORIES,
                                 onPress: navigate

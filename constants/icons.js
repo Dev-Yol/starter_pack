@@ -65,21 +65,22 @@ const CLEANING_AND_WASHING_ICONS_CATEGORIES = [
         },
         route: ''
     },
-    {
-        title: 'Office\nBuilding',
-        icon: {
-            color: Colors.black,
-            type: 'mdi',
-            name: 'domain',
-        },
-        route: ''
-    },
+    
     {
         title: 'Appliances',
         icon: {
             color: Colors.black,
             type: 'mdi',
             name: 'fridge',
+        },
+        route: ''
+    },
+    {
+        title: 'Office\nBuilding',
+        icon: {
+            color: Colors.black,
+            type: 'mdi',
+            name: 'domain',
         },
         route: ''
     },
@@ -113,7 +114,7 @@ const HANDYMAN_AND_SPECIALISTS_ICONS_CATEGORIES = [
         route: ''
     },
     {
-        title: 'Pointer',
+        title: 'Painter',
         icon: {
             color: Colors.black,
             type: 'mdi',
@@ -178,7 +179,7 @@ const PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES = [
         route: ''
     },
     {
-        title: 'Malling',
+        title: 'Moving & Hauling',
         icon: {
             color: Colors.black,
             type: 'mdi',
@@ -208,7 +209,7 @@ const HEALTH_BEAUTY_AND_SPA_ICONS_CATEGORIES = [
         route: ''
     },
     {
-        title: 'Massage\nTeraphist',
+        title: 'Massage\nTherapist',
         icon: {
             color: Colors.black,
             type: 'mdi',
@@ -225,15 +226,15 @@ const HEALTH_BEAUTY_AND_SPA_ICONS_CATEGORIES = [
         },
         route: ''
     },
-    {
-        title: 'Fitness\nInstructor',
-        icon: {
-            color: Colors.black,
-            type: 'mdi',
-            name: 'face',
-        },
-        route: ''
-    },
+    // {
+    //     title: 'Facial',
+    //     icon: {
+    //         color: Colors.black,
+    //         type: 'mdi',
+    //         name: 'face',
+    //     },
+    //     route: ''
+    // },
 
 ];
 

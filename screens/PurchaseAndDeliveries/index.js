@@ -56,6 +56,7 @@ export default props => {
                     <Row ar>
                         <IconTray {
                             ...{
+                                col:3,
                                 color: Theme.leaf,
                                 data: PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES,
                                 onPress: navigate

@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { Metrics, Colors } from "@constants";
 export default ({ style }) => {
     return (
-        <View style={{ ...styles.divider, style }}></View>
+        <View style={{ ...styles.divider, ...style }}></View>
     )
 }
 const styles = StyleSheet.create({
