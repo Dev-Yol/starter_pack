@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
-import { StatusBar } from 'expo-status-bar';
 import { Colors } from './constants';
 import { enableScreens } from "react-native-screens";
-import { Provider as StoreProvider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
+import { Provider as StoreProvider, useDispatch } from 'react-redux';
 import Routes from './navigations';
+import { getCurrentLocation, storeData } from 'utils/helpers'
+import { ActionTypes, actionCreator } from 'utils/redux/actions';
 import {
     store,
-    persistor
 } from 'utils/redux'
 enableScreens();
 const theme = {
@@ -20,13 +19,21 @@ const theme = {
     },
 };
 const App = () => {
+
+    useEffect(() => {
+        (async () => {
+            let location = await getCurrentLocation();
+            if (location.error) {
+                return alert(location.errMessage)
+            }
+            storeData('location', JSON.stringify(location))
+        })()
+    }, [])
     return (
         <StoreProvider store={store}>
-            <PersistGate loading={null} persistor={persistor}>
-                <PaperProvider theme={theme}>
-                    <Routes />
-                </PaperProvider>
-            </PersistGate>
+            <PaperProvider theme={theme}>
+                <Routes />
+            </PaperProvider>
         </StoreProvider>
 
     )

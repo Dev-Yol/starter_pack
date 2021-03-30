@@ -17,6 +17,7 @@ import Icon from './Icon';
 import IconTray from './IconTray'
 import Input from './Input';
 import ListItem from './ListItem';
+import Map from './Map';
 import Modal from './Modal'
 import PaperPhoneInput from './PaperPhoneInput';
 import Row from './Row';
@@ -49,6 +50,7 @@ export {
     IconTray,
     Input,
     ListItem,
+    Map,
     Modal,
     PaperPhoneInput,
     Ripple,

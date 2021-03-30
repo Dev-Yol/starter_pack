@@ -65,7 +65,7 @@ const CLEANING_AND_WASHING_ICONS_CATEGORIES = [
         },
         route: ''
     },
-    
+
     {
         title: 'Appliances',
         icon: {
@@ -158,7 +158,7 @@ const PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'food',
         },
-        route: ''
+        route: 'deliveryFormScreen'
     },
     {
         title: 'Parcel',
@@ -167,7 +167,7 @@ const PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'truck-delivery',
         },
-        route: ''
+        route: 'deliveryFormScreen'
     },
     {
         title: 'QuickBuy',
@@ -176,7 +176,7 @@ const PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'moped',
         },
-        route: ''
+        route: 'deliveryFormScreen'
     },
     {
         title: 'Moving & Hauling',
@@ -185,7 +185,7 @@ const PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'cart',
         },
-        route: ''
+        route: 'deliveryFormScreen'
     },
 
 ];

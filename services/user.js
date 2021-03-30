@@ -1,5 +1,5 @@
 import { ActionTypes, actionCreator } from 'utils/redux/actions';
-import AsyncStorage from '@react-native-community/async-storage'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { Messages } from '@constants'
 const { storageKeys } = Messages;
 export const loginUser = async (dispatch, data) => {

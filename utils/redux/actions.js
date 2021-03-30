@@ -7,6 +7,7 @@ const SET_USER = 'SET_USER';
 
 const FETCH_PROVINCES = 'FETCH_PROVINCES'
 const FETCH_CITIES = 'FETCH_CITIES'
+const SET_LOCATION = 'SET_LOCATION'
 
 const ActionTypes = {
     LOADING,
@@ -16,7 +17,8 @@ const ActionTypes = {
     DELETE,
     FETCH_PROVINCES,
     FETCH_CITIES,
-    SET_USER
+    SET_USER,
+    SET_LOCATION
 }
 
 const actionCreator = (type, payload = null) => ({ type, payload });

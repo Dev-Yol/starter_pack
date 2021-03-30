@@ -5,7 +5,7 @@ import {
 
 } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux'
-import { Button, Carousel, IconTray, Row, Spacer, Text, Divider, Searchbar, Screen, ScrollView } from 'components'
+import { Map, Carousel, IconTray, Row, Spacer, Text, Divider, Searchbar, Screen, ScrollView } from 'components'
 import { Icons, Metrics, Theme, Colors } from '@constants'
 import { logoutUser } from 'services/user'
 
@@ -35,6 +35,7 @@ export default props => {
                 <ScrollView containerStyle={{
                     padding: 0
                 }}>
+                    {/* <Map/> */}
                     <Row ar>
                         <IconTray {
                             ...{
@@ -51,8 +52,6 @@ export default props => {
                     <View style={{
                         paddingHorizontal: 2
                     }}>
-
-
                         <View style={styles.container}>
                             <Text b>Explore more</Text>
                             <Carousel data={HOMESCREEN_CAROUSEL_ITEMS} />

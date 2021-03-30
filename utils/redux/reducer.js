@@ -7,7 +7,8 @@ const initialState = {
         failed: []
     },
     reviews: [],
-    user: {}
+    user: {},
+    location: null
 }
 export default (state = initialState, action) => {
     let { type, payload } = action
@@ -34,6 +35,10 @@ export default (state = initialState, action) => {
         case ActionTypes.DELETE:
             return {
                 ...state, loading: payload
+            }
+        case ActionTypes.SET_LOCATION:
+            return {
+                ...state, location: payload
             }
         case ActionTypes.SET_USER:
             return {

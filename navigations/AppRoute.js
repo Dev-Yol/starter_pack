@@ -2,7 +2,14 @@ import React, { useState } from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import { HomeScreen, WashingAndCleaningScreen, HandymanAndSpecialists, HealthBeautyAndSpaScreen, PurchaseAndDeliveriesScreen } from 'screens';
+import {
+    HomeScreen,
+    WashingAndCleaningScreen,
+    HandymanAndSpecialists,
+    HealthBeautyAndSpaScreen,
+    PurchaseAndDeliveriesScreen,
+    DeliveryForm
+} from 'screens';
 import { Empty, Button, Icon } from 'components'
 import { Colors, Theme } from '@constants'
 
@@ -57,10 +64,17 @@ const AppStack = createStackNavigator(
                 headerShown: false,
             }
         },
+        deliveryFormScreen: {
+            screen: DeliveryForm,
+            navigationOptions: {
+                title: '',
+                headerShown: false,
+            }
+        },
     },
 
     {
-        initialRouteName: 'homeScreen'
+        initialRouteName: 'deliveryFormScreen'
     }
 );
 

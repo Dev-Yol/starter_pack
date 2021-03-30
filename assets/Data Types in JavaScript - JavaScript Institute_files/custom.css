@@ -1,0 +1,24 @@
+.blueInfo h3 {
+    text-transform :none;
+}
+.blueInfo .title-sep span {
+    border-color: #436582;
+}
+#footer .footer-widgets h3.widget-title {
+    color: #355c7d;
+}
+/*#footer .footer-top-links .menu li.menu_item a {
+    color: #6e7879;
+}*/
+table.summary {
+    text-align: left;
+    width: 100%;
+}
+table .firstCol {
+    font-weight: bold;
+    width: 40%;
+}
+table.summary td {
+    text-align: left;
+    font-size: 16px;
+}
