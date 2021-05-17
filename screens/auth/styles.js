@@ -8,7 +8,7 @@ export default
             left: 0,
             right: 0,
             top: 0,
-            height: Metrics.height,
+            bottom: 0,
         },
         logo: {
             marginTop: Metrics.sm,

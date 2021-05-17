@@ -1,28 +1,36 @@
 import React from 'react';
-import MapView from 'react-native-maps';
+import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 
 export default props => {
   return (
     <View style={styles.container, props?.containerStyle}>
       <MapView
-        style={{ ...styles.map, ...props?.mapStyle }}
+        style={{ ...props?.mapStyle }}
+        provider={PROVIDER_GOOGLE}
         region={{
           latitude: props.latitude,
           longitude: props.longitude,
           latitudeDelta: 0.01,
           longitudeDelta: 0.01
         }}
+
         loadingEnabled={false}
-        showsUserLocation={true}
-        showsMyLocationButton={true}
-        showsBuildings={false}
+        // showsUserLocation={true}
+        // showsMyLocationButton={true}
+        showsBuildings
         minZoomLevel={13}
         maxZoomLevel={17}
       // onRegionChangeComplete={region => {
       //   setZoom(Math.round(Math.log(360 / region.latitudeDelta) / Math.LN2))
       // }}
-      ></MapView>
+      >
+        {props?.latitude && <Marker coordinate={{
+          latitude: props.latitude,
+          longitude: props.longitude,
+        }} />}
+
+      </MapView>
     </View>
   );
 }
@@ -34,8 +42,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  map: {
-    width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height * 0.3,
-  },
+
 });

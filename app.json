@@ -18,6 +18,11 @@
     },
     "android": {
       "package": "com.taker.sampleapk",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBI1E0d5XA9Aos1SVsesOPFiA_nOMNj3FA"
+        }
+      },
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",

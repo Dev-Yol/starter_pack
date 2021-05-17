@@ -71,7 +71,7 @@ export default forwardRef((props, ref) => {
                 <TextInput
                     {...props}
                     ref={ref}
-                    style={{ ...styles.input, ...{ color: textColor } }}
+                    style={{ ...styles.input, ...{ color: textColor }, ...props.inputStyle }}
                     value={value}
                     maxLength={readOnly ? value.length : maxLength}
                     keyboardType={type}

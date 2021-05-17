@@ -186,7 +186,6 @@ const Login = props => {
                     </Row>
                 </View>
             </Container>
-            {/* <BottomImage /> */}
         </>
     )
 }

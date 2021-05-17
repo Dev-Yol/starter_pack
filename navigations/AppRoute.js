@@ -8,7 +8,8 @@ import {
     HandymanAndSpecialists,
     HealthBeautyAndSpaScreen,
     PurchaseAndDeliveriesScreen,
-    DeliveryForm
+    FoodAndRestaurantScreen,
+    CleaningAndWasingScreen
 } from 'screens';
 import { Empty, Button, Icon } from 'components'
 import { Colors, Theme } from '@constants'
@@ -64,17 +65,24 @@ const AppStack = createStackNavigator(
                 headerShown: false,
             }
         },
-        deliveryFormScreen: {
-            screen: DeliveryForm,
+        foodAndRestaurantScreen: {
+            screen: FoodAndRestaurantScreen,
             navigationOptions: {
                 title: '',
                 headerShown: false,
             }
         },
+        cleaningAndWasingScreen: {
+            screen: CleaningAndWasingScreen,
+            navigationOptions: {
+                title: '',
+                headerShown: false,
+            }
+        }
     },
 
     {
-        initialRouteName: 'deliveryFormScreen'
+        initialRouteName: 'homeScreen'
     }
 );
 

@@ -6,15 +6,18 @@ import HandymanAndSpecialists from "./HandymanAndSpecialists";
 import HealthBeautyAndSpaScreen from "./HealthBeautyAndSpa";
 import PurchaseAndDeliveriesScreen from "./PurchaseAndDeliveries";
 import LoadingScreen from "./LoadingScreen";
-import DeliveryForm from "./Forms/Delivery";
+import FoodAndRestaurantScreen from "./Forms/FoodAndRestaurant";
+import CleaningAndWasingScreen from './Forms/CleaningAndWashing'
+
 export {
     Login,
-    DeliveryForm,
+    FoodAndRestaurantScreen,
     Register,
     HomeScreen,
     LoadingScreen,
     HandymanAndSpecialists,
     WashingAndCleaningScreen,
     HealthBeautyAndSpaScreen,
-    PurchaseAndDeliveriesScreen
+    PurchaseAndDeliveriesScreen,
+    CleaningAndWasingScreen
 };

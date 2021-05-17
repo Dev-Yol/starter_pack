@@ -45,7 +45,7 @@ const CLEANING_AND_WASHING_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'home',
         },
-        route: ''
+        route: 'cleaningAndWasingScreen'
     },
     {
         title: 'CarWash',
@@ -54,7 +54,7 @@ const CLEANING_AND_WASHING_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'car',
         },
-        route: ''
+        route: 'cleaningAndWasingScreen'
     },
     {
         title: 'Condo',
@@ -63,7 +63,7 @@ const CLEANING_AND_WASHING_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'home-city',
         },
-        route: ''
+        route: 'cleaningAndWasingScreen'
     },
 
     {
@@ -73,7 +73,7 @@ const CLEANING_AND_WASHING_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'fridge',
         },
-        route: ''
+        route: 'cleaningAndWasingScreen'
     },
     {
         title: 'Office\nBuilding',
@@ -158,7 +158,7 @@ const PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'food',
         },
-        route: 'deliveryFormScreen'
+        route: 'foodAndRestaurantScreen'
     },
     {
         title: 'Parcel',
@@ -167,7 +167,7 @@ const PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'truck-delivery',
         },
-        route: 'deliveryFormScreen'
+        route: ''
     },
     {
         title: 'QuickBuy',
@@ -176,7 +176,7 @@ const PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'moped',
         },
-        route: 'deliveryFormScreen'
+        route: ''
     },
     {
         title: 'Moving & Hauling',
@@ -185,7 +185,7 @@ const PURCHASE_AND_DELIVERIES_ICONS_CATEGORIES = [
             type: 'mdi',
             name: 'cart',
         },
-        route: 'deliveryFormScreen'
+        route: ''
     },
 
 ];

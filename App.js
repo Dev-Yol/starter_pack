@@ -19,12 +19,11 @@ const theme = {
     },
 };
 const App = () => {
-
     useEffect(() => {
         (async () => {
             let location = await getCurrentLocation();
             if (location.error) {
-                return alert(location.errMessage)
+                return console.log(location)
             }
             storeData('location', JSON.stringify(location))
         })()
